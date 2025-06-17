@@ -13,6 +13,7 @@
             --highlight-color: #ff2a2a;
             --username-color: rgba(255, 255, 255, 0.6);
             --gradient: linear-gradient(135deg, #1a1a1a 0%, #3a0000 100%);
+            --coming-soon: rgba(255, 255, 255, 0.3);
         }
         
         body {
@@ -120,6 +121,23 @@
             text-align: center;
         }
         
+        .coming-soon {
+            opacity: 0.6;
+            position: relative;
+        }
+        
+        .coming-soon::after {
+            content: "قريباً";
+            position: absolute;
+            left: 10px;
+            background-color: var(--coming-soon);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+        
         footer {
             text-align: center;
             margin-top: 50px;
@@ -165,36 +183,33 @@
             <div class="section">
                 <h2 class="section-title"><i class="fas fa-tv"></i> قنواتي</h2>
                 <div class="item">
-                    <a href="#" target="_blank"><i class="fab fa-youtube"></i> يوتيوب</a>
+                    <a href="https://www.youtube.com/@darkzon39" target="_blank"><i class="fab fa-youtube"></i> يوتيوب</a>
+                </div>
+                <div class="item coming-soon">
+                    <a href="#"><i class="fab fa-tiktok"></i> تيك توك</a>
+                </div>
+                <div class="item coming-soon">
+                    <a href="#"><i class="fab fa-facebook"></i> فيس بوك</a>
                 </div>
                 <div class="item">
-                    <a href="#" target="_blank"><i class="fab fa-tiktok"></i> تيك توك</a>
+                    <a href="https://t.me/darkzon39" target="_blank"><i class="fab fa-telegram"></i> تلغرام</a>
                 </div>
                 <div class="item">
-                    <a href="#" target="_blank"><i class="fab fa-facebook"></i> فيس بوك</a>
+                    <a href="https://www.instagram.com/darkzon39?igsh=bm03NDVmdTJ4eDJn" target="_blank"><i class="fab fa-instagram"></i> انستقرام</a>
                 </div>
                 <div class="item">
-                    <a href="#" target="_blank"><i class="fab fa-telegram"></i> تلغرام</a>
-                </div>
-                <div class="item">
-                    <a href="#" target="_blank"><i class="fab fa-instagram"></i> انستقرام</a>
-                </div>
-                <div class="item">
-                    <a href="#" target="_blank"><i class="fab fa-discord"></i> ديسكورد</a>
+                    <a href="https://discord.com/channels/@me" target="_blank"><i class="fab fa-discord"></i> ديسكورد</a>
                 </div>
             </div>
             
             <!-- قسم التطبيقات -->
             <div class="section">
                 <h2 class="section-title"><i class="fas fa-mobile-alt"></i> تطبيقاتي</h2>
-                <div class="item">
-                    <a href="#" target="_blank"><i class="fab fa-app-store-ios"></i> تطبيق iOS</a>
+                <div class="item coming-soon">
+                    <a href="#"><i class="fab fa-apple"></i> تطبيق iOS</a>
                 </div>
-                <div class="item">
-                    <a href="#" target="_blank"><i class="fab fa-google-play"></i> تطبيق أندرويد</a>
-                </div>
-                <div class="item">
-                    <a href="#" target="_blank"><i class="fas fa-window-maximize"></i> تطبيق ويب</a>
+                <div class="item coming-soon">
+                    <a href="#"><i class="fab fa-android"></i> تطبيق أندرويد</a>
                 </div>
             </div>
         </div>
