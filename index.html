@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة الرسمية العراب</title>
+    <style>
+        :root {
+            --primary-color: #0a0a0a;
+            --secondary-color: #111111;
+            --accent-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --highlight-color: #ff2a2a;
+            --username-color: rgba(255, 255, 255, 0.6);
+            --gradient: linear-gradient(135deg, #1a1a1a 0%, #3a0000 100%);
+        }
+        
+        body {
+            font-family: 'Tajawal', Arial, sans-serif;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0 10px 0;
+            border-bottom: 2px solid var(--highlight-color);
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        h1 {
+            color: var(--highlight-color);
+            font-size: 2.8rem;
+            margin: 0;
+            text-shadow: 0 0 10px rgba(255, 42, 42, 0.3);
+        }
+        
+        .username {
+            color: var(--username-color);
+            font-size: 0.9rem;
+            margin-top: 5px;
+            letter-spacing: 1px;
+        }
+        
+        .sections {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        
+        .section {
+            background: var(--gradient);
+            border-radius: 10px;
+            padding: 25px;
+            flex: 1;
+            min-width: 300px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 0, 0, 0.1);
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(255, 0, 0, 0.2);
+        }
+        
+        .section-title {
+            color: var(--highlight-color);
+            border-bottom: 1px solid var(--highlight-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .item {
+            background-color: rgba(30, 0, 0, 0.5);
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            border-left: 3px solid var(--highlight-color);
+        }
+        
+        .item:hover {
+            background-color: rgba(70, 0, 0, 0.7);
+            transform: translateX(5px);
+        }
+        
+        .item a {
+            color: var(--text-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            gap: 10px;
+        }
+        
+        .item a:hover {
+            color: var(--highlight-color);
+        }
+        
+        .item i {
+            font-size: 1.2rem;
+            width: 20px;
+            text-align: center;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            border-top: 1px solid var(--highlight-color);
+            color: var(--username-color);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .sections {
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>الصفحة الرسمية العراب</h1>
+            <div class="username">By : @ar_c56</div>
+        </header>
+        
+        <div class="sections">
+            <!-- قسم المواقع -->
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-globe"></i> مواقعي</h2>
+                <div class="item">
+                    <a href="https://arc56a.github.io/alarab56/" target="_blank"><i class="fas fa-user"></i> موقعي الشخصي</a>
+                </div>
+                <div class="item">
+                    <a href="https://arc56a.github.io/-Wallpapers-Zone/" target="_blank"><i class="fas fa-image"></i> موقع الخلفيات</a>
+                </div>
+            </div>
+            
+            <!-- قسم القنوات -->
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-tv"></i> قنواتي</h2>
+                <div class="item">
+                    <a href="#" target="_blank"><i class="fab fa-youtube"></i> يوتيوب</a>
+                </div>
+                <div class="item">
+                    <a href="#" target="_blank"><i class="fab fa-tiktok"></i> تيك توك</a>
+                </div>
+                <div class="item">
+                    <a href="#" target="_blank"><i class="fab fa-facebook"></i> فيس بوك</a>
+                </div>
+                <div class="item">
+                    <a href="#" target="_blank"><i class="fab fa-telegram"></i> تلغرام</a>
+                </div>
+                <div class="item">
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i> انستقرام</a>
+                </div>
+                <div class="item">
+                    <a href="#" target="_blank"><i class="fab fa-discord"></i> ديسكورد</a>
+                </div>
+            </div>
+            
+            <!-- قسم التطبيقات -->
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-mobile-alt"></i> تطبيقاتي</h2>
+                <div class="item">
+                    <a href="#" target="_blank"><i class="fab fa-app-store-ios"></i> تطبيق iOS</a>
+                </div>
+                <div class="item">
+                    <a href="#" target="_blank"><i class="fab fa-google-play"></i> تطبيق أندرويد</a>
+                </div>
+                <div class="item">
+                    <a href="#" target="_blank"><i class="fas fa-window-maximize"></i> تطبيق ويب</a>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2023 الصفحة الرسمية العراب. جميع الحقوق محفوظة.</p>
+        </footer>
+    </div>
+</body>
+</html>
