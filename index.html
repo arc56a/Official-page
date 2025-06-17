@@ -13,7 +13,6 @@
             --highlight-color: #ff2a2a;
             --username-color: rgba(255, 255, 255, 0.6);
             --gradient: linear-gradient(135deg, #1a1a1a 0%, #3a0000 100%);
-            --coming-soon: rgba(255, 255, 255, 0.3);
         }
         
         body {
@@ -86,10 +85,29 @@
             gap: 10px;
         }
         
-        .item {
+        .platform {
+            margin-bottom: 20px;
+        }
+        
+        .platform-title {
+            color: var(--highlight-color);
+            font-size: 1.1rem;
+            margin: 15px 0 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .app-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .app-info {
             background-color: rgba(30, 0, 0, 0.5);
             padding: 12px 15px;
-            margin-bottom: 10px;
             border-radius: 5px;
             display: flex;
             align-items: center;
@@ -97,22 +115,40 @@
             border-left: 3px solid var(--highlight-color);
         }
         
-        .item:hover {
+        .app-info:hover {
             background-color: rgba(70, 0, 0, 0.7);
             transform: translateX(5px);
         }
         
-        .item a {
-            color: var(--text-color);
-            text-decoration: none;
+        .app-name {
             display: flex;
             align-items: center;
-            width: 100%;
             gap: 10px;
+            flex-grow: 1;
         }
         
-        .item a:hover {
-            color: var(--highlight-color);
+        .download-btn {
+            background-color: var(--highlight-color);
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .download-btn:hover {
+            background-color: #ff4a4a;
+            transform: translateY(-2px);
+        }
+        
+        .download-btn i {
+            font-size: 0.9rem;
         }
         
         .item i {
@@ -124,13 +160,18 @@
         .coming-soon {
             opacity: 0.6;
             position: relative;
+            padding: 12px 15px;
+            background-color: rgba(30, 0, 0, 0.5);
+            border-radius: 5px;
+            margin-bottom: 10px;
+            border-left: 3px solid var(--highlight-color);
         }
         
         .coming-soon::after {
             content: "قريباً";
             position: absolute;
             left: 10px;
-            background-color: var(--coming-soon);
+            background-color: rgba(255, 255, 255, 0.3);
             color: white;
             padding: 2px 8px;
             border-radius: 10px;
@@ -171,45 +212,115 @@
             <!-- قسم المواقع -->
             <div class="section">
                 <h2 class="section-title"><i class="fas fa-globe"></i> مواقعي</h2>
-                <div class="item">
-                    <a href="https://arc56a.github.io/alarab56/" target="_blank"><i class="fas fa-user"></i> موقعي الشخصي</a>
+                <div class="app-container">
+                    <div class="app-info">
+                        <div class="app-name">
+                            <i class="fas fa-user"></i>
+                            <span>موقعي الشخصي</span>
+                        </div>
+                        <a href="https://arc56a.github.io/alarab56/" class="download-btn" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> زيارة
+                        </a>
+                    </div>
                 </div>
-                <div class="item">
-                    <a href="https://arc56a.github.io/-Wallpapers-Zone/" target="_blank"><i class="fas fa-image"></i> موقع الخلفيات</a>
+                <div class="app-container">
+                    <div class="app-info">
+                        <div class="app-name">
+                            <i class="fas fa-image"></i>
+                            <span>موقع الخلفيات</span>
+                        </div>
+                        <a href="https://arc56a.github.io/-Wallpapers-Zone/" class="download-btn" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> زيارة
+                        </a>
+                    </div>
                 </div>
             </div>
             
             <!-- قسم القنوات -->
             <div class="section">
                 <h2 class="section-title"><i class="fas fa-tv"></i> قنواتي</h2>
-                <div class="item">
-                    <a href="https://www.youtube.com/@darkzon39" target="_blank"><i class="fab fa-youtube"></i> يوتيوب</a>
+                <div class="app-container">
+                    <div class="app-info">
+                        <div class="app-name">
+                            <i class="fab fa-youtube"></i>
+                            <span>يوتيوب</span>
+                        </div>
+                        <a href="https://www.youtube.com/@darkzon39" class="download-btn" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> زيارة
+                        </a>
+                    </div>
                 </div>
-                <div class="item coming-soon">
-                    <a href="#"><i class="fab fa-tiktok"></i> تيك توك</a>
+                <div class="app-container">
+                    <div class="app-info">
+                        <div class="app-name">
+                            <i class="fab fa-telegram"></i>
+                            <span>تلغرام</span>
+                        </div>
+                        <a href="https://t.me/darkzon39" class="download-btn" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> زيارة
+                        </a>
+                    </div>
                 </div>
-                <div class="item coming-soon">
-                    <a href="#"><i class="fab fa-facebook"></i> فيس بوك</a>
+                <div class="app-container">
+                    <div class="app-info">
+                        <div class="app-name">
+                            <i class="fab fa-instagram"></i>
+                            <span>انستقرام</span>
+                        </div>
+                        <a href="https://www.instagram.com/darkzon39?igsh=bm03NDVmdTJ4eDJn" class="download-btn" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> زيارة
+                        </a>
+                    </div>
                 </div>
-                <div class="item">
-                    <a href="https://t.me/darkzon39" target="_blank"><i class="fab fa-telegram"></i> تلغرام</a>
+                <div class="app-container">
+                    <div class="app-info">
+                        <div class="app-name">
+                            <i class="fab fa-discord"></i>
+                            <span>ديسكورد</span>
+                        </div>
+                        <a href="https://discord.com/channels/@me" class="download-btn" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> زيارة
+                        </a>
+                    </div>
                 </div>
-                <div class="item">
-                    <a href="https://www.instagram.com/darkzon39?igsh=bm03NDVmdTJ4eDJn" target="_blank"><i class="fab fa-instagram"></i> انستقرام</a>
+                <div class="coming-soon">
+                    <i class="fab fa-tiktok"></i> تيك توك
                 </div>
-                <div class="item">
-                    <a href="https://discord.com/channels/@me" target="_blank"><i class="fab fa-discord"></i> ديسكورد</a>
+                <div class="coming-soon">
+                    <i class="fab fa-facebook"></i> فيس بوك
                 </div>
             </div>
             
             <!-- قسم التطبيقات -->
             <div class="section">
                 <h2 class="section-title"><i class="fas fa-mobile-alt"></i> تطبيقاتي</h2>
-                <div class="item coming-soon">
-                    <a href="#"><i class="fab fa-apple"></i> تطبيق iOS</a>
+                
+                <!-- منصة iOS -->
+                <div class="platform">
+                    <div class="platform-title">
+                        <i class="fab fa-apple"></i> iOS
+                    </div>
+                    <div class="coming-soon">
+                        <i class="fas fa-mobile"></i> تطبيق قريباً
+                    </div>
                 </div>
-                <div class="item coming-soon">
-                    <a href="#"><i class="fab fa-android"></i> تطبيق أندرويد</a>
+                
+                <!-- منصة أندرويد -->
+                <div class="platform">
+                    <div class="platform-title">
+                        <i class="fab fa-android"></i> أندرويد
+                    </div>
+                    <div class="app-container">
+                        <div class="app-info">
+                            <div class="app-name">
+                                <i class="fas fa-user-plus"></i>
+                                <span>تطبيق تسجيل المشتركين</span>
+                            </div>
+                            <a href="https://e.top4top.io/f_XWotGizZ1EiZ7cQ7m6VR7A/1750299239/3454z2bor0.apk" class="download-btn" download>
+                                <i class="fas fa-download"></i> تنزيل
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
