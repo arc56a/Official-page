@@ -25,89 +25,103 @@
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 100%;
             margin: 0 auto;
-            padding: 20px;
+            padding: 15px;
         }
         
         header {
             text-align: center;
-            padding: 30px 0 10px 0;
+            padding: 20px 0 10px 0;
             border-bottom: 2px solid var(--highlight-color);
-            margin-bottom: 40px;
+            margin-bottom: 25px;
             position: relative;
         }
         
         h1 {
             color: var(--highlight-color);
-            font-size: 2.8rem;
+            font-size: 1.8rem;
             margin: 0;
             text-shadow: 0 0 10px rgba(255, 42, 42, 0.3);
         }
         
         .username {
             color: var(--username-color);
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             margin-top: 5px;
             letter-spacing: 1px;
         }
         
         .sections {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 30px;
+            flex-direction: column;
+            gap: 20px;
         }
         
         .section {
             background: var(--gradient);
             border-radius: 10px;
-            padding: 25px;
-            flex: 1;
-            min-width: 300px;
+            padding: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
             border: 1px solid rgba(255, 0, 0, 0.1);
-        }
-        
-        .section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(255, 0, 0, 0.2);
         }
         
         .section-title {
             color: var(--highlight-color);
             border-bottom: 1px solid var(--highlight-color);
-            padding-bottom: 10px;
+            padding-bottom: 8px;
             margin-top: 0;
             display: flex;
             align-items: center;
             gap: 10px;
+            font-size: 1.2rem;
         }
         
         .platform {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .platform-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 8px 0;
         }
         
         .platform-title {
             color: var(--highlight-color);
-            font-size: 1.1rem;
-            margin: 15px 0 10px 0;
+            font-size: 1rem;
             display: flex;
             align-items: center;
             gap: 8px;
         }
         
+        .toggle-icon {
+            transition: transform 0.3s ease;
+            color: var(--highlight-color);
+        }
+        
+        .platform-content {
+            display: none;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .platform-content.show {
+            display: block;
+        }
+        
         .app-container {
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            margin-bottom: 15px;
+            gap: 8px;
+            margin-bottom: 10px;
         }
         
         .app-info {
             background-color: rgba(30, 0, 0, 0.5);
-            padding: 12px 15px;
+            padding: 10px 12px;
             border-radius: 5px;
             display: flex;
             align-items: center;
@@ -117,54 +131,49 @@
         
         .app-info:hover {
             background-color: rgba(70, 0, 0, 0.7);
-            transform: translateX(5px);
         }
         
         .app-name {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             flex-grow: 1;
+            font-size: 0.9rem;
         }
         
         .download-btn {
             background-color: var(--highlight-color);
             color: white;
             border: none;
-            padding: 6px 12px;
+            padding: 5px 10px;
             border-radius: 5px;
             cursor: pointer;
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
             gap: 5px;
+            white-space: nowrap;
         }
         
         .download-btn:hover {
             background-color: #ff4a4a;
-            transform: translateY(-2px);
         }
         
-        .download-btn i {
-            font-size: 0.9rem;
-        }
-        
-        .item i {
-            font-size: 1.2rem;
-            width: 20px;
-            text-align: center;
+        .item i, .platform-title i {
+            font-size: 1rem;
         }
         
         .coming-soon {
             opacity: 0.6;
             position: relative;
-            padding: 12px 15px;
+            padding: 10px 12px;
             background-color: rgba(30, 0, 0, 0.5);
             border-radius: 5px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             border-left: 3px solid var(--highlight-color);
+            font-size: 0.9rem;
         }
         
         .coming-soon::after {
@@ -175,26 +184,38 @@
             color: white;
             padding: 2px 8px;
             border-radius: 10px;
-            font-size: 0.7rem;
+            font-size: 0.6rem;
             font-weight: bold;
         }
         
         footer {
             text-align: center;
-            margin-top: 50px;
-            padding: 20px;
+            margin-top: 30px;
+            padding: 15px;
             border-top: 1px solid var(--highlight-color);
             color: var(--username-color);
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
         
-        @media (max-width: 768px) {
-            .sections {
-                flex-direction: column;
+        @media (min-width: 768px) {
+            .container {
+                max-width: 1200px;
+                padding: 20px;
             }
             
             h1 {
                 font-size: 2.2rem;
+            }
+            
+            .sections {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            
+            .section {
+                flex: 1;
+                min-width: 300px;
             }
         }
     </style>
@@ -297,28 +318,50 @@
                 
                 <!-- منصة iOS -->
                 <div class="platform">
-                    <div class="platform-title">
-                        <i class="fab fa-apple"></i> iOS
+                    <div class="platform-header" onclick="togglePlatform('ios')">
+                        <div class="platform-title">
+                            <i class="fab fa-apple"></i> iOS
+                        </div>
+                        <i class="fas fa-chevron-down toggle-icon" id="ios-arrow"></i>
                     </div>
-                    <div class="coming-soon">
-                        <i class="fas fa-mobile"></i> تطبيق قريباً
+                    <div class="platform-content" id="ios-content">
+                        <div class="coming-soon">
+                            <i class="fas fa-mobile"></i> تطبيق قريباً
+                        </div>
                     </div>
                 </div>
                 
                 <!-- منصة أندرويد -->
                 <div class="platform">
-                    <div class="platform-title">
-                        <i class="fab fa-android"></i> أندرويد
+                    <div class="platform-header" onclick="togglePlatform('android')">
+                        <div class="platform-title">
+                            <i class="fab fa-android"></i> أندرويد
+                        </div>
+                        <i class="fas fa-chevron-down toggle-icon" id="android-arrow"></i>
                     </div>
-                    <div class="app-container">
-                        <div class="app-info">
-                            <div class="app-name">
-                                <i class="fas fa-user-plus"></i>
-                                <span>تطبيق تسجيل المشتركين</span>
+                    <div class="platform-content" id="android-content">
+                        <div class="app-container">
+                            <div class="app-info">
+                                <div class="app-name">
+                                    <i class="fas fa-user-plus"></i>
+                                    <span>تطبيق تسجيل المشتركين</span>
+                                </div>
+                                <a href="https://e.top4top.io/f_XWotGizZ1EiZ7cQ7m6VR7A/1750299239/3454z2bor0.apk" class="download-btn" download>
+                                    <i class="fas fa-download"></i> تنزيل
+                                </a>
                             </div>
-                            <a href="https://e.top4top.io/f_XWotGizZ1EiZ7cQ7m6VR7A/1750299239/3454z2bor0.apk" class="download-btn" download>
-                                <i class="fas fa-download"></i> تنزيل
-                            </a>
+                        </div>
+                        <!-- يمكن إضافة المزيد من تطبيقات الأندرويد هنا -->
+                        <div class="app-container">
+                            <div class="app-info">
+                                <div class="app-name">
+                                    <i class="fas fa-gamepad"></i>
+                                    <span>تطبيق الألعاب</span>
+                                </div>
+                                <a href="#" class="download-btn coming-soon-btn">
+                                    <i class="fas fa-download"></i> قريباً
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -329,5 +372,25 @@
             <p>© 2023 الصفحة الرسمية العراب. جميع الحقوق محفوظة.</p>
         </footer>
     </div>
+
+    <script>
+        function togglePlatform(platformId) {
+            const content = document.getElementById(`${platformId}-content`);
+            const arrow = document.getElementById(`${platformId}-arrow`);
+            
+            content.classList.toggle('show');
+            
+            if (content.classList.contains('show')) {
+                arrow.style.transform = 'rotate(180deg)';
+            } else {
+                arrow.style.transform = 'rotate(0deg)';
+            }
+        }
+        
+        // افتح منصة الأندرويد افتراضيًا
+        document.addEventListener('DOMContentLoaded', function() {
+            togglePlatform('android');
+        });
+    </script>
 </body>
 </html>
